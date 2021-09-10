@@ -1,9 +1,9 @@
 void main() {
-  num a= 0;
-  num b= 0;
-  num c= 0;
-  num d= 0;
-  num e= 5;
+  num a= 100;
+  num b= 60;
+  num c= 80;
+  num d= 70;
+  num e= 80;
   
   num total= a+b+c+d+e;
   num per = total/500*100;
