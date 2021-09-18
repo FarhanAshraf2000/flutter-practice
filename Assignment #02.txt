@@ -1,0 +1,433 @@
+#Question number 01:
+We have many operatos to work with folloeing are examples of these operators.
+/*there are various type of operators in Dart.
+ * such as :Arithmetic operators, Equivalent and relational operators ,logical operators
+ * Arithmetic operators*/
+void main(){
+  var a=8;
+  var b=3;
+  var c= a+b;/addition/
+  print("$c addition");
+  var d=a-b; /subtraction/
+  print("$d subtraction");
+  int e=a*b;/multiplication/
+  print("$e multiplication");
+  double f=a/b;/division/
+  print("$f division");
+  int g=a~/b;/division integer result/
+  print("$g division integer result"); 
+  int h=a%b; /remainder of integer division/
+  print("$h remainder of integer division");
+
+  print("${++b} increment in b"); /increment in b/
+
+  print("${--a} decrement in a"); /decrement in a/
+
+
+
+  /* Equivalent and Relational Operators*/
+  bool i=a>b;
+  print("$i,greater than");
+  bool j=a<b;
+  print("$j smaller than");
+  bool k=a>=b;
+  print("$k greater than and equal");
+  bool l= a<=b;
+  print("$l smaller than and equal");
+  bool m= a==b;
+  print("$m equality");
+  bool n= a!=b;
+  print("$n not equal");
+
+
+
+
+
+  /* Logical Operators*/
+  bool o=a+b>10&&a-b<10;
+  print("$o And operator(all expression must be true) for true result");
+
+  bool p= a+b>10 || a-b>10;
+  print ("$p OR Operator(atleast one expression must be true) for true result");
+
+  bool q= a<b;
+  print ("${!q} Not equal(return inverse of the result)");
+ }
+RESULT:
+11 addition
+-1 subtraction
+30 multiplication
+0.8333333333333334 division
+0 division integer result
+5 remainder of integer division
+7 increment in b
+4 decrement in a
+false,greater than
+true smaller than
+false greater than and equal
+true smaller than and equal
+false equality
+true not equal
+true And operator(all expression must be true) for true result
+true OR Operator(atleast one expression must be true) for true result
+false Not equal(return inverse of the result)
+
+
+
+
+
+#Question number 02:
+
+
+a. var a = 2, b = 1;
+b. var result = --a - --b + ++b + b--;
+Explain the output at each stage:
+c. --a;
+d. --a - --b;
+e. --a - --b + ++b;
+f. --a - --b + ++b + b--;
+
+Answer c): the output of this statment is 1 
+          as the state is pre decrement so the value of will subtract first then will again assign in variable a
+
+Answer d): the output of this statenent is 1
+          as the sate is defined above that is 1 and b performs the same operation of pre decreament and after subtracting 1 from b it becomes 0 so the result will 
+          be a (which is 1) -  b(which is 0) gives the output 1
+
+Answer e): the output of this statment is 2 because 
+           as above statment, the output of --a - --b; is 1 which is explained above , then ++b performs a pre increament so the value of b is 0 for now and after adding 1 into b it becomes
+           1 then according to the statment --a - --b (which is 1) + (++b) gives the output of 2
+
+Answer f): the output of this statment is 3 because 
+           as above statment, the output of --a --b + ++b is 2 which is explained above , then b-- performs a post decreamnt so the it will add the value of b to the statment then subtract 1 from b 
+           so accordind to the statment --a - --b + ++b(which is 2) + b--(which 1 before the postdecreament ); gives the output 3
+ 
+
+
+
+
+
+
+
+
+
+
+#Question number 03:
+
+
+void main() 
+{ 
+  int one_ticket= 600;
+  int buying_ticket = one_ticket*5;
+  print("your total Amount for 5 tickets is : ${buying_ticket}");
+} 
+
+#QUESTION NUMBER 04:
+
+void main(){
+
+ List<int> a = [1,2,3,4,5,6,7];
+ List<int> b = [3,5,6,7,9,10];
+
+List<int> diff = a.toSet().difference(b.toSet()).toList();
+print(diff.toString());
+}
+
+RESULT:
+[1, 2, 4]
+#QUESTION NUMBER 05:
+OPERATOR '?'
+
+void main() { 
+   var a = 10; 
+   var res = a > 12 ? "value greater than 10":"value lesser than or equal to 10"; 
+   print(res); 
+} 
+RESULT:
+value lesser than or equal to 10
+
+OPERATOR '??'
+
+void main() { 
+   var a = null; 
+   var b = 12; 
+   var res = a ?? b; 
+   print(res); 
+}
+
+RESULT:
+12
+#Question number 06:
+ the number of data types supported by dart are 5 
+ these are 
+   Datatype       keyword
+ number           int,double,num
+ string           String
+ Boolean          bool
+ lists            List
+ Maps             Map
+
+
+
+1. Number: The number in Dart Programming is the data type that is used to hold the numeric value. Dart numbers can be classified as: 
+
+   The int data type is used to represent whole numbers.
+   The double data type is used to represent 64-bit floating-point numbers.
+   The num type is an inherited data type of the int and double types.
+example
+void main() { 
+ int a = 34;
+ num b = 24.5;
+ double c = 34.6;
+  print ("$a\n$b\n$c");
+}
+
+2. String: It used to represent a sequence of characters.
+   It is a sequence of UTF-16 code units. The keyword string is used to represent string literals.
+   String values are embedded in either single or double-quotes.
+example
+void main() { 
+ String a= "Farhan Ashraf";
+  print(a);
+
+}
+
+
+3. Boolean: It represents Boolean values true and false. The keyword bool is used to represent a Boolean literal in DART. 
+example
+ 
+void main() {
+  String str = 'Coding is '; 
+  String str1 = 'Fun'; 
+    
+  bool val = (str==str1);
+  print (val);  
+}
+
+
+4. List: List data type is similar to arrays in other programming languages. 
+   A list is used to represent a collection of objects. It is an ordered group of objectsvoid main() 
+{ 
+    List gfg = ["farhan","ahsan","bilal"];
+    
+    
+    print(gfg); 
+    print(gfg[0]); 
+} 
+exmaple
+
+5. Map: The Map object is a key and value pair. Keys and values on a map may be of any type. It is a dynamic collection. 
+example
+void main() 
+{ 
+   Map a = {2:"farhan",3:"biala",4:"ahsan"};
+  print(a);
+  print(a.keys);
+  print(a.values);
+} 
+#QUESTON NUMBER 07:
+
+void main(){
+
+  var a = [1,2,3,4,5,6,7,8,9,10];
+
+  var b = [7,14,21,28,35,42,49,56,63,70];
+
+  var table = Map.fromIterables(a,b);
+
+  print("Table Of 7:");
+  print(table);
+
+}
+
+RESULT:
+Table Of 7:
+{1: 7, 2: 14, 3: 21, 4: 28, 5: 35, 6: 42, 7: 49, 8: 56, 9: 63, 10: 70}
+
+#Question Number 08:
+
+
+
+void main() 
+{ 
+ var js = "dartcoding";
+ var user_pass="dartcoding";
+ if (user_pass==""){
+   print ("Please enter your password Make sure its not empty "); 
+ }else if (user_pass==js ){
+   print ("Correct! The password you have entered matches the original password");
+ }else{
+   print("Incorrect password");
+ }
+} 
+  
+
+
+
+
+ 
+# Question number 09:
+void main() {
+ var list1=['Farhan', 'Bilal','Ahsan'];
+ var list2=[422,400,450];
+ var total =500;
+ num per0= list2[0]/total * 100;
+ num per1= list2[1]/total * 100;
+ num per2= list2[2]/total * 100;
+ print("${list1[0]} your total marks are: ${list2[0]}\nAnd your percentage is ${per0}\n\n");
+ print("${list1[1]} your total marks are: ${list2[1]}\nAnd your percentage is ${per1}\n\n");
+ print("${list1[2]} your total marks are: ${list2[2]}\nAnd your percentage is ${per2}\n\n");
+             
+ 
+}
+
+
+#QUESTION NUMBER 10:
+
+5 Illegal:
+1.
+void main(){
+
+  var name = "Ahsan";
+
+  print (name);
+}
+RESULT:
+Ahsan
+
+2.
+numbers can be use after alphabets
+void main(){
+
+  var name2 = "Ahsan";
+
+  print (name2);
+}
+RESULT:
+Ahsan
+
+3.
+special character like $ and _ can be use after alphabets
+void main(){
+
+  var name$ = "Ahsan";
+
+  print (name$);
+}
+RESULT:
+Ahsan
+
+4.
+first letter can be Upper case but it is case sensitive
+void main(){
+
+  var Name = "Farhan";
+
+  print (Name);
+}
+RESULT:
+Farhan
+5.
+We can use numbers between alphabets
+void main(){
+
+  var na1me = "Farhan";
+
+  print (na1me);
+}
+RESULT:
+Farhan
+
+5 Illegal;
+1.
+numbers cannot be used in the start
+void main(){
+
+  var 1name = "Farhan";
+
+  print (1name);
+}
+RESULT:
+Gives error
+
+2.
+space creats an error
+void main(){
+
+  var name 1  = "Farhan";
+
+  print (name 1 );
+}
+RESULT:
+Gives error
+3.
+Special character like # and other are not allowed
+void main(){
+
+  var  #name = "Ali";
+
+  print (#name );
+}
+RESULT:
+Gives error
+
+4.
+numbers cannot be used as variable name
+void main(){
+
+  var  1 = "Ali";
+
+  print (1 );
+}
+RESULT:
+Gives error
+
+5.
+variable name should be assign else it gives error
+void main(){
+
+  var  = "Ali";
+
+  print (NAME);
+}
+RESULT:
+Gives error
+
+
+
+#QUESTION NUMBER 11:
+
+We can use range function to change city name
+void main(){
+
+  String city = 'Hyderabad';
+  String new_city  = city.replaceRange(0, 5 ,"Islam"); 
+
+  print("Old name was ${city}");
+  print("New name is ${new_city}");
+}
+RESULT:
+Old name was Hyderabad
+New name is Islamabad
+
+
+
+
+# Question Number 12:
+void main() {
+  var name = "Farhan Ashraf";
+  var month = 'September ';
+  int peekfactor= 80;
+  int ch_units = 16;
+  int normal_units=236;
+  int ch_peekfactor= 22;
+  int a = peekfactor*ch_peekfactor;
+  int b = normal_units*ch_units;
+  int net_amount_payable= a+b;
+  int ch_late= 2000;
+  int net_amount_payable_b=net_amount_payable+ ch_late;
+  print("Peek factor Unit Charges:${ch_peekfactor}\nNormal Unit Charges: ${ch_units}\n\n<======Customer bill detailes=======\n");
+  print("Late Payment Charges ; ${ch_late}");
+  print('name: ${name}\ncurrent month: ${month}\nnormal units: ${normal_units}\nPeek factor Units: ${peekfactor}');
+  print("Amount Payable with in Due Date: ${net_amount_payable}\nAmount Payable After Due Date: ${net_amount_payable_b}");
+}
